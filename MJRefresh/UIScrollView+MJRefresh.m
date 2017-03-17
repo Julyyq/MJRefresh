@@ -75,6 +75,7 @@ static const char MJRefreshFooterKey = '\0';
 #pragma mark - 过期
 - (void)setFooter:(MJRefreshFooter *)footer
 {
+    if (self.contentSize.height <= self.frame.size.height) return;
     self.mj_footer = footer;
 }
 
